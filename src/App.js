@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
@@ -11,6 +11,7 @@ import PostList from "./components/PostList/PostList";
 import SinglePostList from "./components/SinglePostList/SinglePostList";
 
 function App() {
+  const isLoggedIn = true;
   return (
     <div className="">
       <Routes>
@@ -18,9 +19,12 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="footer" element={<Footer />} />
-          <Route path="contact" element={<Contact />} />
+          <Route
+            path="contact"
+            element={isLoggedIn ? <Navigate to="/" /> : <Contact />}
+          />
           <Route path="posts/:id" element={<Posts />} />
-          <Route path="list" element={<PostList />} />
+          <Route path="list/" element={<PostList />} />
           <Route path="list/:id" element={<SinglePostList />} />
           <Route path="*" element={<NoMatch />} />
         </Route>

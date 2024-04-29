@@ -88,6 +88,21 @@ export function Header(props) {
               List
             </NavLink>
           </li>
+          {/* <li className="mr-2">
+            <NavLink
+              to="list"
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "white" : "inherit",
+                };
+              }}
+              className={({ isActive, isPending }) => {
+                return isActive ? "active" : isPending ? "pending" : "";
+              }}
+            >
+              List
+            </NavLink>
+          </li> */}
         </ul>
       </div>
     </div>
