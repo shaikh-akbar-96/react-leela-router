@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 
-export function Header(props) {
+export default function Header(props) {
   return (
     <div className="flex justify-between bg-purple-400 px-3 py-3">
       <div>Logo</div>
