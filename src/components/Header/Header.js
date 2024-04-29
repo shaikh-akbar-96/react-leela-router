@@ -43,7 +43,22 @@ export function Header(props) {
               About
             </NavLink>
           </li>
-          <li>
+          <li className="mr-2">
+            <NavLink
+              to="posts/123"
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "white" : "inherit",
+                };
+              }}
+              className={({ isActive, isPending }) => {
+                return isActive ? "active" : isPending ? "pending" : "";
+              }}
+            >
+              Posts
+            </NavLink>
+          </li>
+          <li className="mr-2">
             <NavLink
               to="contact"
               style={({ isActive }) => {
@@ -56,6 +71,21 @@ export function Header(props) {
               }}
             >
               Contact
+            </NavLink>
+          </li>
+          <li className="mr-2">
+            <NavLink
+              to="list"
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "white" : "inherit",
+                };
+              }}
+              className={({ isActive, isPending }) => {
+                return isActive ? "active" : isPending ? "pending" : "";
+              }}
+            >
+              List
             </NavLink>
           </li>
         </ul>

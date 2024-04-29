@@ -6,6 +6,9 @@ import { Footer } from "./components/Footer/Footer";
 import NoMatch from "./components/NoMatch/NoMatch";
 import { Header } from "./components/Header/Header";
 import Contact from "./components/Contact/Contact";
+import Posts from "./components/Posts/Posts";
+import PostList from "./components/PostList/PostList";
+import SinglePostList from "./components/SinglePostList/SinglePostList";
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="footer" element={<Footer />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="posts/:id" element={<Posts />} />
+          <Route path="list" element={<PostList />} />
+          <Route path="list/:id" element={<SinglePostList />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>

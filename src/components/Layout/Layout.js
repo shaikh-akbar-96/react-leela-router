@@ -10,7 +10,10 @@ export default function Layout() {
           <li>
             <Header />
           </li>
-          <Outlet />
+
+          <li>
+            <Outlet />
+          </li>
           <li>
             <Footer />
           </li>
